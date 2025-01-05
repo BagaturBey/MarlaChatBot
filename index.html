@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marla - Sohbet Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+            <p class="bot-message">Merhaba! Ben Marla. Size nasıl yardımcı olabilirim?</p>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Bana bir şeyler sor..." />
+            <button id="send-btn">Gönder</button>
+        </div>
+    </div>
+
+    <div class="add-container">
+        <h3>Yeni Soru-Cevap Ekle</h3>
+        <input type="text" id="new-question" placeholder="Yeni soru (ör. 'Nasılsın?')" />
+        <input type="text" id="new-answer" placeholder="Yeni cevap (ör. 'İyiyim, teşekkür ederim!')" />
+        <button id="add-btn">Ekle</button>
+    </div>
+
+    <div class="export-import-container">
+        <button id="export-btn">Verileri Dışa Aktar</button>
+        <input type="file" id="import-file" accept=".json" />
+        <button id="import-btn">Verileri İçeri Aktar</button>
+    </div>
+
+    <!-- Soruları gösteren pencere -->
+    <div class="question-list-container" id="questionListContainer">
+        <h2>Sorabileceğiniz Sorular</h2>
+        <div id="questionList"></div>
+        <button onclick="closeQuestionList()">Kapat</button>
+    </div>
+
+    <!-- Sağ köşede soruları gösteren buton -->
+    <button id="questionButton" onclick="openQuestionList()">Soruları Göster</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
